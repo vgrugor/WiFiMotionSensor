@@ -30,8 +30,9 @@ void Buzzer::wifiConnected() {
 }
 
 void Buzzer::motionDetected() {
-    this->turnOn(50);
-    delay(100);
-    this->turnOn(50);
-    delay(500);
+    for (int i = 0; i < Buzzer::MOTION_SIGNAL_COUNT; i++) {
+        this->turnOn(Buzzer::MOTION_SIGNAL_TIME);
+        delay(Buzzer::MOTION_SIGNAL_DELAY);
+    }
+    delay(Buzzer::MOTION_SIGNAL_DELAY_AFTER_SIGNAL_END);
 }

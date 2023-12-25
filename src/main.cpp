@@ -13,9 +13,9 @@ void setup() {
 	Serial.begin(115200);
 
 	pinMode(BUZZER_PIN, OUTPUT);
-	pinMode(D7, INPUT);
+	pinMode(MOTION_SENSOR_PIN, INPUT);
 
-	digitalWrite(D6, HIGH);
+	BuzzerSignalizator.turnOff();
 
 	BuzzerSignalizator.wifiConnection();
 	WiFiConnection.initAndConnect();

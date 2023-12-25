@@ -15,6 +15,10 @@
             void motionDetected();
 
         private:
+            const int MOTION_SIGNAL_TIME = 50;
+            const int MOTION_SIGNAL_COUNT = 1;
+            const int MOTION_SIGNAL_DELAY = 100;
+            const int MOTION_SIGNAL_DELAY_AFTER_SIGNAL_END = 2000;
             OutputDigitalPin buzzerPin;
     };
 
